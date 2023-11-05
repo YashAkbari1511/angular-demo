@@ -1,0 +1,35 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                #
+            </th>
+            <th>
+                Topic
+            </th>
+            <th>
+                visit
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let item of data;let i = index">
+            <tr>
+                <td>
+                    <p>
+                        {{i + 1}}
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{item.title}}
+                    </p>
+                </td>
+                <td>
+                    <a *ngIf="item.visit else noTitle" [routerLink]="item.visit"><i class="bi bi-arrow-bar-right"></i></a>
+                    <ng-template #noTitle> <span>-</span> </ng-template>
+                </td>
+            </tr>
+        </ng-container>
+    </tbody>
+</table>

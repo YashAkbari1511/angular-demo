@@ -1,0 +1,13 @@
+<header>
+    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-light">
+        <div class="position-sticky">
+            <div class="list-group list-group-flush mx-3 mt-4">
+                <ng-container *ngFor="let item of sidebarData">
+                    <a [routerLink]="item.path" class="list-group-item list-group-item-action py-2 ripple active">
+                        <i class="fas fa-chart-area fa-fw me-3"></i><span>{{item.title}}</span>
+                    </a>
+                </ng-container>
+            </div>
+        </div>
+    </nav>
+</header>
